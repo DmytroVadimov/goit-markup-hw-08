@@ -37,10 +37,6 @@
 
         transition: color var(--trnstn);
         
-        .current {
-        color: var(--act-link-txt);
-        }
-
         &:hover,
         &:focus {
         color: var(--act-link-txt);
@@ -48,6 +44,7 @@
 }
 
 .current {
+    color: var(--act-link-txt);
     position: relative;
 
     &::after {
