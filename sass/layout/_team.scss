@@ -57,7 +57,8 @@
 .team--link {
     transition: background-color var(--trnstn);
         
-        .team--icon {
+    &:hover .team--icon,
+    &:focus .team--icon {
             fill: var(--act-btn-txt);
         }
     }
