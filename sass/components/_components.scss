@@ -39,11 +39,24 @@
 }
 
 .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    padding: 0 15px;
     margin: 0 auto;
+    border: 1px solid orange;
+    
+    @include mobile {
+        max-width: 480px;        
+    }
+
+    @include tablet {
+        max-width: 768px;
+        }
+    
+    @include desktop {
+        max-width: 1200px;
+        }
 }
+    
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -56,4 +69,3 @@
     clip-path: inset(50%);
     margin: -1px;
 }
-
