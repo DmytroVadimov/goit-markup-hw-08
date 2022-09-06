@@ -334,6 +334,11 @@ body {
   padding-bottom: 94px;
   border-color: var(--hero-bcg);
 }
+@media screen and (max-width: 1199px) {
+  .doing {
+    display: none;
+  }
+}
 
 .doing__title {
   text-align: center;

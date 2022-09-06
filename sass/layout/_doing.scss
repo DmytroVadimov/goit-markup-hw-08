@@ -1,7 +1,10 @@
 .doing {
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
+
     padding-bottom: 94px;
     border-color: var(--hero-bcg);
-
 }
 
 .doing__title {
