@@ -218,27 +218,44 @@ body {
 }
 
 .solutions {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0px;
   text-align: center;
   background-color: #C4C4C4;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/solution.jpg);
-  max-width: 1600px;
-  min-height: 600px;
+  max-width: 480px;
+  min-height: 400px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .solutions {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .solutions {
+    padding: 200px 0px;
+    max-width: 1600px;
+    min-height: 600px;
+  }
+}
 
 .solutions__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
+  font-size: 26px;
+  line-height: 1.6153846154;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--act-btn-txt);
+}
+@media screen and (min-width: 1200px) {
+  .solutions__title {
+    font-size: 44px;
+    line-height: 1.3636363636;
+  }
 }
 
 .solutions__button {
