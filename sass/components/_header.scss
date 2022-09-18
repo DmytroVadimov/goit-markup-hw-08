@@ -8,24 +8,42 @@
 }
 
 .header__logo {
-        margin-right: 93px;
-        padding-top: 24px;
-        padding-bottom: 25px;               
-        color: var(--pas-txt);        
+        color: var(--pas-txt);
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 24px;
+        line-height: calc(28/24);
+
+        @include tablet {
+            margin-right: 88px;
+            padding-top: 26px;
+            padding-bottom: 26px;            
+        }
+
+        @include desktop {
+            margin-right: 93px;
+            padding-top: 24px;
+            padding-bottom: 25px;
+            font-size: 26px;
+            line-height: calc(31/26);
+        }       
 }
 
-.header__menu {
+.nav__menu {
     display: flex;
+    @media screen and (max-width: 767.5px) {
+        display: none;
+    }
 }
 
-.header__item {    
+.nav__item {    
     margin-right: 50px;
     &:last-child {
     margin-right: 0;
     }
 }
 
-.header__link {
+.nav__link {
         display: block;
         padding-top: 32px;
         padding-bottom: 32px;
@@ -61,24 +79,47 @@
 
 .header__contact {
     display: flex;
-    margin-left: auto;    
+    margin-left: auto;
+    
+    @media screen and (max-width: 767.5px) {
+            display: none;
+        }
+    @include tablet {
+        flex-direction: column;       
+    }
+    @include desktop {
+        flex-direction: row;
+    }
+
 }
 
 .header__item:not(:last-child) {
-    margin-right: 50px;
+    @include desktop {
+        margin-right: 50px;
+    }    
 }
 
 .header__mail {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     align-items: center;
-
-    font-weight: 500;        
-    line-height: calc(16/14);
+    font-weight: 500;
     letter-spacing: 0.02em; 
     color: var(--hd-cont-txt);
 
+    @include tablet {
+        padding-top: 21px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: calc(14/12);
+    }
+    @include desktop {        
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 0px;
+        font-size: 14px;
+        line-height: calc(16/14);  
+    }
+    
     transition: color var(--trnstn);
         
     &:hover,
@@ -89,14 +130,23 @@
         
 .header__tel {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     align-items: center;
-
     font-weight: 500;
-    line-height: calc(16/14);
     letter-spacing: 0.02em;
     color: var(--hd-cont-txt);
+    
+    @include tablet {
+        padding-bottom: 19px;
+        font-size: 12px;
+        line-height: calc(14/12);
+        }
+
+    @include desktop {        
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: calc(16/14);
+        }
 
     transition: color var(--trnstn);
 
