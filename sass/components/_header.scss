@@ -4,6 +4,7 @@
     
     .container { 
     display: flex;
+    position: relative;
     }
 }
 
@@ -161,3 +162,33 @@
     margin-right: 10px;
     fill: currentColor;
     }
+
+.mobile-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-left: auto;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    
+    @media screen and (min-width: 767.5px) {
+            display: none;
+        }    
+}
+
+.mobile-open-icon {
+    fill: var(--pas-txt);
+    transition: fill var(--trnstn);
+    
+    .mobile-open:hover &,
+    .mobile-open:focus & {
+            fill: var(--act-link-txt);
+        }
+}
