@@ -5,19 +5,38 @@
     background-color: var(--sol-bcg);
 
     .container {
-    display: flex;
-    align-items: baseline;
+        @include mobile {
+            text-align: center;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include desktop {            
+            text-align: left;
+            flex-wrap: nowrap;
+            align-items: baseline;
+        }
     }
 }
 
 .contact {
-    margin-right: 70px;
+    @include tablet {
+        margin-left: 76px;
+        margin-right: 165px;
+    }
+
+    @include desktop {
+        margin-left: 0px;
+        margin-right: 70px;
+        }    
 }
 
 .footer__logo {
     margin-bottom: 20px;    
     color: var(--act-btn-txt);
-
 }
 
 .address {
@@ -25,10 +44,21 @@
 }
 
 .address__item {
-    display: block;
-    &:not(:last-child) {
-    margin-bottom: 9px;
+    @include mobile {
+        display: block;
+        margin-bottom: 8px;        
+        &:last-child {
+        margin-bottom: 60px;
         }
+    }
+
+    @include desktop {
+        display: block;
+        &:not(:last-child) {
+        margin-bottom: 9px;
+        }
+    }
+    
 }
 
 .address__map {
@@ -68,7 +98,10 @@
 }
 
 .join {
-    margin-right: 93px;
+    @include desktop {
+        margin-right: 93px;
+    }
+    
 }
 
 .join__title {
@@ -82,12 +115,21 @@
     color: var(--act-btn-txt);
 }
 
+.join__menu {
+    @include mobile {
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    @include tablet {
+        margin-bottom: 0px;
+    }
+}
+
 .join__link {
     background-color: rgba(255, 255, 255, 0.1);
-
     transition: background-color var(--trnstn);
-    
-}
+    }
 
 .join__icon {
     fill: var(--act-btn-txt);

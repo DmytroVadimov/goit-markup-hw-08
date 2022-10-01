@@ -197,6 +197,10 @@
 
     opacity: 1;
     transition: opacity var(--trnstn);
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .mobile__container {
